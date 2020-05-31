@@ -1,0 +1,17 @@
+def roulette_sim(bet,number,calling):
+    roll = randint(0,36)
+    money = 100
+    if roll%2 == 0:
+        roll_is = "Even"
+    else:
+        roll_is = "Odd"
+    if number == roll:
+        earnings = bet*35
+        earnings += money
+    elif calling == roll_is:
+        earnings = bet
+        money += bet
+    else:
+        money -= bet
+        bet = -bet
+    return roll,roll_is,bet
