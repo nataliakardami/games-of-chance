@@ -1,0 +1,22 @@
+import random
+
+money = 100
+
+#Write your game of chance functions here
+
+# Heads or Tails
+def heads_or_tails(bet,choice):
+  money = 100
+  coin = ['Heads','Tails']
+  flip = random.choice(coin)
+  if flip == choice:
+    money += bet
+  else:
+    money -= bet
+    bet = -bet
+  return flip,bet   
+
+
+
+#Call your game of chance functions here
+print(heads_or_tails(50,'Heads'))
