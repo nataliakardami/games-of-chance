@@ -1,0 +1,17 @@
+from random import randint
+def cho_han(calling,bet):
+    money = 100
+    dice1 = randint(1,6)
+    dice2 = randint(1,6)
+    addition = dice1 + dice2
+    if addition%2 == 0:
+        dealer = "Even"
+    else:
+        dealer = "Odd"
+    if calling == dealer:
+        money += bet
+    else:
+        money -= bet
+        bet = -bet
+    return dealer,bet
+
